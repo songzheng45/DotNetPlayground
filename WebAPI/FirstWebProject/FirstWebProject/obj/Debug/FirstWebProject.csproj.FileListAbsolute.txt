@@ -1,0 +1,14 @@
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/obj/Debug/FirstWebProject.csprojResolveAssemblyReference.cache
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/obj/Debug/FirstWebProject.csproj.CoreCompileInputs.cache
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/FirstWebProject.dll
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/FirstWebProject.pdb
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/Newtonsoft.Json.dll
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/System.Net.Http.Formatting.dll
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/System.Web.Http.dll
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/System.Web.Http.WebHost.dll
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/System.Net.Http.Formatting.xml
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/System.Web.Http.xml
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/System.Web.Http.WebHost.xml
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/bin/Newtonsoft.Json.xml
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/obj/Debug/FirstWebProject.dll
+/Users/zheng/Documents/GitHub/DotNetPlayground/WebAPI/FirstWebProject/FirstWebProject/obj/Debug/FirstWebProject.pdb

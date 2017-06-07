@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{E05B0486-74D7-4934-848F-56079B1DE5C1}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FirstWebProject/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="FirstWebProject/App_Start/WebApiConfig.cs" Line="19" Column="10" />
+      <File FileName="FirstWebProject/Global.asax" Line="1" Column="1" />
+      <File FileName="FirstWebProject/Controllers/HomeController.cs" Line="11" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FirstWebProject PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
