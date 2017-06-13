@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{CDF53E69-0425-461F-A7B3-A51DA89B9AC5}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebAPIStreamToClient/Web.config">
+    <Files>
+      <File FileName="WebAPIStreamToClient/Web.config" Line="15" Column="16" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebAPIStreamToClient" expanded="True">
+            <Node name="WebAPIStreamToClient" expanded="True">
+              <Node name="downloads" expanded="True" />
+              <Node name="Web.config" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WebAPIStreamToClient PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
