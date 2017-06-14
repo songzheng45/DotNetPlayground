@@ -1,19 +1,22 @@
 ﻿<Properties StartupConfiguration="{E14206AA-BFE2-47EB-B829-C7ACC69EDBAD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TodoApi/wwwroot/default.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TodoApi/Controllers/TodoItemController.cs">
     <Files>
-      <File FileName="TodoApi/appsettings.json" Line="1" Column="1" />
-      <File FileName="TodoApi/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="TodoApi/appsettings.json" Line="10" Column="10" />
+      <File FileName="TodoApi/appsettings.Development.json" Line="11" Column="26" />
       <File FileName="TodoApi/Program.cs" Line="1" Column="1" />
-      <File FileName="TodoApi/Startup.cs" Line="35" Column="42" />
+      <File FileName="TodoApi/Startup.cs" Line="25" Column="10" />
+      <File FileName="TodoApi/Environments/Configuration.cs" Line="9" Column="17" />
+      <File FileName="TodoApi/Environments/LoggingConfiguration.cs" Line="1" Column="1" />
+      <File FileName="TodoApi/Environments/DatabaseConfiguration.cs" Line="15" Column="4" />
+      <File FileName="TodoApi/Controllers/TodoItemController.cs" Line="27" Column="84" />
       <File FileName="TodoApi/Controllers/ValuesController.cs" Line="17" Column="10" />
-      <File FileName="TodoApi/Controllers/TodoItemController.cs" Line="18" Column="56" />
-      <File FileName="TodoApi/Models/TodoItem.cs" Line="22" Column="9" />
-      <File FileName="TodoApi/wwwroot/default.html" Line="8" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/zheng/Documents/GitHub/DotNetPlayground/NetCore/FirstWebAPI/TodoApi/Startup.cs" relfile="TodoApi/Startup.cs" line="24" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.TodoApi PreferredExecutionTarget="MonoDevelop.Default" />
