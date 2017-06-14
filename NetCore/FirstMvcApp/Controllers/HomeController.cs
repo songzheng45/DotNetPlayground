@@ -1,5 +1,6 @@
 using FirstMvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 public class HomeController : Controller
 {
@@ -13,7 +14,16 @@ public class HomeController : Controller
     
     public ActionResult Index()
     {
+        //int n = 0;
+        //int b = 10 / n;
+
+
         ViewBag.NowTime = _clock.GetTime();
+        return View();
+    }
+
+    public ActionResult About()
+    {
         return View();
     }
 }
