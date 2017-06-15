@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TodoApi.Environments;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,17 +14,18 @@ namespace TodoApi.Controllers
     public class TodoItemController : Controller
     {
         private readonly Configuration configuration;
+        private readonly ILogger<TodoItemController> _logger;
 
-        public TodoItemController(Configuration configuration)
+        public TodoItemController(Configuration configuration, ILogger<TodoItemController> logger)
         {
             this.configuration = configuration;
+            this._logger = logger;
         }
 
         // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-
             return new string[] { "value1", "value2", configuration.Database.DBName };
         }
 
@@ -31,6 +33,10 @@ namespace TodoApi.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
+            //throw new ArgumentException("hahahaha,Errors!", nameof(id));
+            _logger.LogDebug("This is a Debug log");
+            _logger.LogError("This is a Error log");
+            _logger.LogCritical("This is a Critical log");
             return "value";
         }
 
