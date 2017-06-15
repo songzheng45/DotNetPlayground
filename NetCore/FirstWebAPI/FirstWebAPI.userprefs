@@ -2,9 +2,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="TodoApi/Program.cs">
     <Files>
       <File FileName="TodoApi/Startup.cs" Line="59" Column="1" />
-      <File FileName="TodoApi/appsettings.json" Line="9" Column="11" />
       <File FileName="TodoApi/Controllers/TodoItemController.cs" Line="28" Column="10" />
-      <File FileName="TodoApi/Program.cs" Line="1" Column="1" />
+      <File FileName="TodoApi/Program.cs" Line="15" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
