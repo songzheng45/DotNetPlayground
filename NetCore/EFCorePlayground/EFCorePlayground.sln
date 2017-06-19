@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstEFCore", "FirstEFCore\FirstEFCore.csproj", "{E05F5486-7EE9-4274-86AB-24669CD7D2DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomeloMySql", "PomeloMySql\PomeloMySql.csproj", "{50019D41-BA74-437D-AF92-1533698A91CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E05F5486-7EE9-4274-86AB-24669CD7D2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E05F5486-7EE9-4274-86AB-24669CD7D2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E05F5486-7EE9-4274-86AB-24669CD7D2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50019D41-BA74-437D-AF92-1533698A91CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50019D41-BA74-437D-AF92-1533698A91CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50019D41-BA74-437D-AF92-1533698A91CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50019D41-BA74-437D-AF92-1533698A91CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
