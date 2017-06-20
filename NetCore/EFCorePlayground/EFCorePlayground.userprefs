@@ -1,12 +1,13 @@
-﻿<Properties StartupConfiguration="{E05F5486-7EE9-4274-86AB-24669CD7D2DD}|Default">
+﻿<Properties StartupConfiguration="{50019D41-BA74-437D-AF92-1533698A91CE}|Default">
   <MonoDevelop.Ide.ItemProperties.FirstEFCore PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PomeloMySql/Program.cs">
     <Files>
-      <File FileName="PomeloMySql/User.cs" Line="42" Column="63" />
-      <File FileName="PomeloMySql/Program.cs" Line="11" Column="26" />
+      <File FileName="PomeloMySql/User.cs" Line="17" Column="20" />
+      <File FileName="PomeloMySql/Program.cs" Line="41" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.PomeloMySql PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
