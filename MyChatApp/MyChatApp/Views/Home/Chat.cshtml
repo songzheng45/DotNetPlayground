@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Chat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .container {
+        width: 750px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .conversation {
+        height: 460px;
+    }
+
+    .userlist {
+        width: 200px;
+        height: 500px;
+        float: left;
+        border: 1px solid #000;
+    }
+
+    .chatPanel {
+        width: 500px;
+        height: 500px;
+        float: right;
+        border: 1px solid #000;
+    }
+</style>
+
+<h2>Chat</h2>
+
+<div class="container">
+    <ul class="userlist"></ul>
+    <div class="chatPanel">
+        <ul class="conversation"></ul>
+        <div>
+            <input type="hidden" name="connectionId" value="" />
+            <span>@ViewBag.Nickname :</span>
+            <input type="text" id="message" value="" />
+            <input type="button" id="sendmessage" value="发送" />
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.6.4.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
+<script src="~/chat/hubs"></script>
+<script type="text/javascript">
+    var chat = $.connection.chatHub;
+
+    chat.client.showAllUsers = function (allUsers) {
+        $('.userlist').html('');
+        allUsers.forEach(function (item) {
+            $('.userlist').append('<li>' + item.Nickname + '</li>');
+        });
+    }
+
+    chat.client.addNewMessageToPage = function (user, message) {
+        // Add the message to the page.
+        $('.conversation').append('<li><strong>' + htmlEncode(user.Nickname)
+            + '</strong>: ' + htmlEncode(message) + '</li>');
+    };
+
+    $.connection.hub.start().done(function () {
+        chat.server.addUser({ Nickname:'@ViewBag.Nickname' });
+
+        $('#sendmessage').click(function () {
+            // Call the Send method on the hub.
+            chat.server.send(
+                { nickname: '@ViewBag.Nickname' },
+                $('#message').val()
+            );
+            // Clear text box and reset focus for next comment.
+            $('#message').val('').focus();
+        });
+    });
+
+    function htmlEncode(value) {
+        var encodedValue = $('<div />').text(value).html();
+        return encodedValue;
+    }
+</script>
