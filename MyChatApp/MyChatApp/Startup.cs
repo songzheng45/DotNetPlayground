@@ -9,11 +9,12 @@ namespace MyChatApp
     {
         public void Configuration(IAppBuilder builder)
         {
-            builder.MapSignalR("/chat", new Microsoft.AspNet.SignalR.HubConfiguration()
-            {
-                EnableDetailedErrors = true,
-                EnableJavaScriptProxies = true
-            });
+            builder.MapSignalR();
+            //builder.MapSignalR("/chat", new Microsoft.AspNet.SignalR.HubConfiguration()
+            //{
+            //    EnableDetailedErrors = true,
+            //    EnableJavaScriptProxies = true
+            //});
         }
     }
 }
