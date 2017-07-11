@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{74530FB2-1A79-4E7A-9BA5-BC221C2BD101}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RedisDemo01/Program.cs">
+    <Files>
+      <File FileName="RedisDemo01/Program.cs" Line="12" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.RedisDemo01 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
