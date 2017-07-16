@@ -11,7 +11,7 @@ namespace RedisDemo01
         {
             // Connect 或 ConnectAsync
             // ConnectionMultiplexer 实现了 IDisposable 接口，当不再需要时会自动释放，并且为了简洁，不必使用 using 包含。
-            ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost");
+            ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("192.168.1.11:6379");
 
             // 如果涉及 master/slave (主从)设置, 尽管将所有节点包含进来, Redis 会自动标志出 master.
             // ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("server1:6379,server2:6379");

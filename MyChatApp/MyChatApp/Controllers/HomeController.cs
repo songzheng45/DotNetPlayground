@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using MyChatApp.Models;
 
 namespace MyChatApp.Controllers
 {
@@ -11,11 +13,8 @@ namespace MyChatApp.Controllers
     {
         public ActionResult Index()
         {
-            //var mvcName = typeof(Controller).Assembly.GetName();
-            //var isMono = Type.GetType("Mono.Runtime") != null;
-
-            //ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
-            //ViewData["Runtime"] = isMono ? "Mono" : ".NET";
+            string ip = Utils.GetLocalIP();
+            ViewBag.ip = ip;
 
             return View();
         }
@@ -27,6 +26,10 @@ namespace MyChatApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewBag.nickname = nickname;
+
+            string ip = Utils.GetLocalIP();
+            ViewBag.ip = ip;
+
             return View();
         }
     }

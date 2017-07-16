@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" rel="stylesheet" />
+<link href="~/Styles/toastr.css" rel="stylesheet" />
 <style>
     .container {
         width: 750px;
@@ -39,10 +39,13 @@
         <ul class="conversation"></ul>
         <div>
             <input type="hidden" name="connectionId" value="" />
-            <span>@(ViewBag.nickname) :</span>
+            <span id="nickName">@(ViewBag.nickname) </span>
             <input type="text" id="message" value="" />
             <input type="button" id="sendmessage" value="发送" />
         </div>
+		<div>
+            IP: @ViewBag.ip
+		</div>
     </div>
 </div>
 

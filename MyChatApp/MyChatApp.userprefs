@@ -1,7 +1,16 @@
 ﻿<Properties StartupConfiguration="{705B45B8-EE95-49BB-BF7C-440683F693FD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyChatApp/ChatHub.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyChatApp/Models/ErrorHandlingPipelineModule.cs">
     <Files>
-      <File FileName="MyChatApp/ChatHub.cs" Line="1" Column="1" />
+      <File FileName="MyChatApp/Scripts/chat.js" Line="34" Column="22" />
+      <File FileName="MyChatApp/App_Start/RouteConfig.cs" Line="1" Column="1" />
+      <File FileName="MyChatApp/Controllers/HomeController.cs" Line="16" Column="1" />
+      <File FileName="MyChatApp/Global.asax.cs" Line="8" Column="6" />
+      <File FileName="MyChatApp/App_Start/Startup.cs" Line="24" Column="10" />
+      <File FileName="MyChatApp/Models/UserMapping.cs" Line="21" Column="34" />
+      <File FileName="MyChatApp/ChatHub.cs" Line="38" Column="24" />
+      <File FileName="MyChatApp/Views/Home/Chat.cshtml" Line="48" Column="9" />
+      <File FileName="MyChatApp/Web.config" Line="22" Column="108" />
+      <File FileName="MyChatApp/Models/ErrorHandlingPipelineModule.cs" Line="16" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

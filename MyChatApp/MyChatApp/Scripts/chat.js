@@ -1,7 +1,21 @@
 ﻿$(function () {
     toastr.success('Welcome!');
 
+    var nickName = $('#nickName').text().trim() ;
+
+    //$.connection.hub.url = '/signalr';
+
     var chat = $.connection.chatHub;
+
+
+    $.connection.hub.logging = true;
+    $.connection.hub.error(function (error) {
+        console.log('SignalR Error: ' + error);
+    });
+
+    $.connection.hub.qs = {
+        nickName:nickName
+    };
 
     $.connection.hub.connectionSlow(function () {
         toastr.warning('connectionSlow');
@@ -25,33 +39,47 @@
     chat.client.showAllUsers = function (allUsers) {
         $('.userlist').html('');
         allUsers.forEach(function (item) {
-            $('.userlist').append('<li>' + item.Nickname + '</li>');
+            $('.userlist').append('<li>' + item + '</li>');
         });
     }
 
-    chat.client.addNewMessageToPage = function (user, message) {
+    chat.client.addNewMessageToPage = function (name, message) {
         // Add the message to the page.
-        $('.conversation').append('<li><strong>' + htmlEncode(user.Nickname)
-            + '</strong>: ' + htmlEncode(message) + '</li>');
+        $('.conversation').append('<li><strong>' + name
+            + '</strong>: ' + message + '</li>');
     };
 
     $.connection.hub.start().done(function () {
-        chat.server.addUser({ Nickname: '@ViewBag.Nickname' });
+        
+        //chat.server.addUser({ Nickname: nickName });
 
         $('#sendmessage').click(function () {
             // Call the Send method on the hub.
-            chat.server.send(
-                { nickname: '@ViewBag.Nickname' },
-                $('#message').val()
-            );
+            chat.server.send($('#message').val());
             // Clear text box and reset focus for next comment.
             $('#message').val('').focus();
         });
-    });
 
+        $("#message").keydown(function (e) {
+            if ((e.which === 13 && e.ctrlKey)) {
+                $(this).val(function (i, val) {
+                    return val + "\n";
+                });
+            }
+        }).keypress(function (e) {
+            if (e.which === 13 && !e.ctrlKey) {
+                $('#sendmessage').click();
+                e.preventDefault();
+            }
+        });
+     }).fail(function(error){
+        toastr.error(error.message);
+     });
+
+     /*
     function htmlEncode(value) {
         var encodedValue = $('<div />').text(value).html();
         return encodedValue;
     }
-
+    */
 });
