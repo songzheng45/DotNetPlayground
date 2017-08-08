@@ -1,1 +1,15 @@
-﻿<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">User Details</div>
+    <table class="table table-striped">
+        @foreach (string key in Model.Keys)
+        {
+            <tr>
+                <th>@key</th>
+                <td>@Model[key]</td>
+            </tr>
+        }
+    </table>
+</div>

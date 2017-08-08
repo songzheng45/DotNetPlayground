@@ -1,7 +1,6 @@
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityDemo01", "IdentityDemo01\IdentityDemo01.csproj", "{331B5A86-7928-47F7-8CEE-9D090ED83393}"
 EndProject
 Global
@@ -14,8 +13,5 @@ Global
 		{331B5A86-7928-47F7-8CEE-9D090ED83393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{331B5A86-7928-47F7-8CEE-9D090ED83393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{331B5A86-7928-47F7-8CEE-9D090ED83393}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

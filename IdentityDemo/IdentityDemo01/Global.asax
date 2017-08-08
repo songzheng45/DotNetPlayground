@@ -1,1 +1,1 @@
-﻿<%@ Application Inherits="IdentityDemo01.Global" %>
+﻿<%@ Application Inherits="Users.Global" %>
