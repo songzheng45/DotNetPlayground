@@ -10,12 +10,10 @@ namespace Users.Infrastructure
 {
     public class AppIdentityDbContext : IdentityDbContext<AppUser>
     {
-        // 调用基类的构造函数, 并传入 ConnectionString 的 name, 用来连接数据库
         public AppIdentityDbContext() : base("IdentityDb") { }
 
         static AppIdentityDbContext()
         {
-            // 静态构造函数中调用该方法, 一旦使用 Entity Framework Code First 特性创建数据库, 就使用指定的初始化类初始化数据库
             Database.SetInitializer<AppIdentityDbContext>(new IdentityDbInit());
         }
 

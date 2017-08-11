@@ -4,8 +4,6 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityDemo01", "IdentityDemo01\IdentityDemo01.csproj", "{331B5A86-7928-47F7-8CEE-9D090ED83393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlForEF6", "MySqlForEF6\MySqlForEF6.csproj", "{DEE3E4AF-E9A4-459C-A6D8-6FE2CF832AFF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,10 +14,6 @@ Global
 		{331B5A86-7928-47F7-8CEE-9D090ED83393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{331B5A86-7928-47F7-8CEE-9D090ED83393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{331B5A86-7928-47F7-8CEE-9D090ED83393}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEE3E4AF-E9A4-459C-A6D8-6FE2CF832AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEE3E4AF-E9A4-459C-A6D8-6FE2CF832AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEE3E4AF-E9A4-459C-A6D8-6FE2CF832AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEE3E4AF-E9A4-459C-A6D8-6FE2CF832AFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
