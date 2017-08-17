@@ -10,15 +10,24 @@ namespace Users.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            //var mvcName = typeof(Controller).Assembly.GetName();
-            //var isMono = Type.GetType("Mono.Runtime") != null;
+            return View(GetData(nameof(Index)));
+        }
 
-            //ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
-            //ViewData["Runtime"] = isMono ? "Mono" : ".NET";
+        [Authorize(Roles = "Users")]
+        public ActionResult OtherAction()
+        {
+            return View(nameof(Index), GetData(nameof(OtherAction)));
+        }
 
-            Dictionary<string, object> data = new Dictionary<string, object>();
-            data.Add("Placeholder", "Placeholder");
-            return View(data);
+        public Dictionary<string, object> GetData(string actionName)
+        {
+            var dict = new Dictionary<string, object>();
+            dict.Add("Action", actionName);
+            dict.Add("User", HttpContext.User.Identity.Name);
+            dict.Add("Authenticated", HttpContext.User.Identity.IsAuthenticated);
+            dict.Add("Auth Type", HttpContext.User.Identity.AuthenticationType);
+            dict.Add("In User Role", HttpContext.User.IsInRole("Users"));
+            return dict;
         }
     }
 }

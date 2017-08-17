@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -20,6 +17,11 @@ namespace Users.Controllers
         // GET: Account
         public ActionResult Login(string returnUrl)
         {
+            if (HttpContext.User.Identity.IsAuthenticated)
+            {
+                return View("Error", new[] { "Access Denied" });
+            }
+
             ViewBag.returnUrl = returnUrl;
             return View();
         }
@@ -46,6 +48,13 @@ namespace Users.Controllers
             }
             ViewBag.returnUrl = returnUrl;
             return View(details);
+        }
+
+        [Authorize]
+        public ActionResult Logout()
+        {
+            AuthManager.SignOut();
+            return RedirectToAction("Index", "Home");
         }
 
         private IAuthenticationManager AuthManager

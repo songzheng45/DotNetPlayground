@@ -69,6 +69,7 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -120,6 +121,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RoleAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -129,6 +131,7 @@
     <Compile Include="Infrastructure\AppUserManager.cs" />
     <Compile Include="Infrastructure\CustomPasswordValidator.cs" />
     <Compile Include="Infrastructure\CustomUserValidator.cs" />
+    <Compile Include="Infrastructure\IdentityHelpers.cs" />
     <Compile Include="Models\AppRole.cs" />
     <Compile Include="Models\AppUserModels.cs" />
     <Compile Include="Models\UserViewModel.cs" />
@@ -166,6 +169,9 @@
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\RoleAdmin\Index.cshtml" />
+    <Content Include="Views\RoleAdmin\Create.cshtml" />
+    <Content Include="Views\RoleAdmin\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />

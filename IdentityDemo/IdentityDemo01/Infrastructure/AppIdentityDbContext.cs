@@ -1,10 +1,7 @@
-﻿using Users.Models;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data.Entity;
+using Users.Models;
 
 namespace Users.Infrastructure
 {
@@ -15,8 +12,9 @@ namespace Users.Infrastructure
 
         static AppIdentityDbContext()
         {
-            // 静态构造函数中调用该方法, 一旦使用 Entity Framework Code First 特性创建数据库, 就使用指定的初始化类初始化数据库
-            Database.SetInitializer<AppIdentityDbContext>(new IdentityDbInit());
+            // 应用程序启动时调初始化数据库
+            // 只要使用 EF Code First 创建数据库, 就使用指定的初始化类初始化数据库
+            Database.SetInitializer(new IdentityDbInit());
         }
 
         public static AppIdentityDbContext Create()
@@ -36,7 +34,34 @@ namespace Users.Infrastructure
 
         public void PerformInitialSetup(AppIdentityDbContext context)
         {
+            /**
+             * 程序第一次启动时, 初始化管理员信息
+             * 不要忘记context
+             */
+            AppRoleManager roleMgr = new AppRoleManager(new RoleStore<AppRole>(context));
+            AppUserManager userMgr = new AppUserManager(new UserStore<AppUser>(context));
 
+            string roleName = "Administrators";
+            string userName = "Admin";
+            string email = "admin@example.com";
+            string password = "123456";
+
+            if (!roleMgr.RoleExists(roleName))
+            {
+                roleMgr.Create(new AppRole(roleName));
+            }
+
+            AppUser user = userMgr.FindByName(userName);
+            if (user == null)
+            {
+                userMgr.Create(new AppUser() { UserName = userName, Email = email }, password);
+                user = userMgr.FindByName(userName);
+            }
+
+            if (!userMgr.IsInRole(user.Id, roleName))
+            {
+                userMgr.AddToRole(user.Id, roleName);
+            }
         }
     }
 }
