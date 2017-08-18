@@ -24,7 +24,7 @@ namespace Users
                 // 验证类型. 
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
 
-                // 如果没有通过验证则跳转到这个URL
+                // 如果没有通过验证则跳转到登录页
                 LoginPath = new PathString("/Account/Login")
             });
         }

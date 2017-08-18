@@ -115,7 +115,6 @@
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -132,6 +131,11 @@
     <Compile Include="Infrastructure\CustomPasswordValidator.cs" />
     <Compile Include="Infrastructure\CustomUserValidator.cs" />
     <Compile Include="Infrastructure\IdentityHelpers.cs" />
+    <Compile Include="Migrations\201708181034179_AddCustomerProperty.cs" />
+    <Compile Include="Migrations\201708181034179_AddCustomerProperty.Designer.cs">
+      <DependentUpon>201708181034179_AddCustomerProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppRole.cs" />
     <Compile Include="Models\AppUserModels.cs" />
     <Compile Include="Models\UserViewModel.cs" />
@@ -172,12 +176,18 @@
     <Content Include="Views\RoleAdmin\Index.cshtml" />
     <Content Include="Views\RoleAdmin\Create.cshtml" />
     <Content Include="Views\RoleAdmin\Edit.cshtml" />
+    <Content Include="Views\Home\UserProp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708181034179_AddCustomerProperty.resx">
+      <DependentUpon>201708181034179_AddCustomerProperty.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
