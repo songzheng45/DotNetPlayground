@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -17,7 +18,8 @@ namespace Users.Controllers
             return View(GetData(nameof(Index)));
         }
 
-        [Authorize(Roles = "Users")]
+        //[Authorize(Roles = "BJStaff")]
+        [ClaimsAccess(ClaimType = ClaimTypes.StateOrProvince, Issuer = "RemoteClaims", Value = "BJ")]
         public ActionResult OtherAction()
         {
             return View(nameof(Index), GetData(nameof(OtherAction)));
@@ -46,16 +48,14 @@ namespace Users.Controllers
         {
             var user = CurrentUser;
             user.City = city;
+            user.Country = user.SetCountryFromCity(user.City);
             await UserManager.UpdateAsync(user);
             return View(user);
         }
 
         public AppUser CurrentUser
         {
-            get
-            {
-                return UserManager.FindByName(HttpContext.User.Identity.Name);
-            }
+            get { return UserManager.FindByName(HttpContext.User.Identity.Name); }
         }
 
         public AppUserManager UserManager

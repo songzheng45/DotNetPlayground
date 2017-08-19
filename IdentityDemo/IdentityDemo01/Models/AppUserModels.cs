@@ -21,8 +21,9 @@ namespace Users.Models
     {
         public Cities City { get; set; }
         public Countries Country { get; set; }
+        public string Nickname { get; set; }
 
-        public Countries GetCountryFromCity(Cities city)
+        public Countries SetCountryFromCity(Cities city)
         {
             Countries c = Countries.无;
             switch (city)

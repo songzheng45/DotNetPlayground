@@ -41,8 +41,15 @@ namespace Users.Controllers
                 else
                 {
                     ClaimsIdentity ident = await UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
+
+                    // 模拟:将该登录用户认定来自从第三方系统的登录
+                    ident.AddClaims(LocationClaimsProvider.GetClaims(ident));
+
+                    // 添加地址在北京的员工权限
+                    ident.AddClaims(ClaimsRoles.CreateRolesFromClaims(ident));
+
                     AuthManager.SignOut();
-                    AuthManager.SignIn(new AuthenticationProperties() { IsPersistent = true }, ident);
+                    AuthManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, ident);
                     return Redirect(returnUrl);
                 }
             }

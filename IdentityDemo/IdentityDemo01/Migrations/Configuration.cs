@@ -77,7 +77,7 @@ namespace Users.Migrations
             {
                 if (dbUser.Country == Countries.нч)
                 {
-                    dbUser.Country = dbUser.GetCountryFromCity(dbUser.City);
+                    dbUser.Country = dbUser.SetCountryFromCity(dbUser.City);
                 }
             }
 

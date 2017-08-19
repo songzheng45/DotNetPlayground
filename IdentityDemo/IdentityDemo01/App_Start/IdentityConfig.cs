@@ -27,6 +27,11 @@ namespace Users
                 // 如果没有通过验证则跳转到登录页
                 LoginPath = new PathString("/Account/Login")
             });
+
+
+            // 继承Google账号验证
+            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+            app.UseGoogleAuthentication();
         }
     }
 }
