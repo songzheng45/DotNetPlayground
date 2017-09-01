@@ -11,6 +11,7 @@ using Users.Models;
 
 namespace Users.Controllers
 {
+    [RequireHttps]
     [Authorize(Roles = "Administrators")]
     public class RoleAdminController : Controller
     {

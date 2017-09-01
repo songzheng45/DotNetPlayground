@@ -18,12 +18,12 @@ namespace Users.Infrastructure
         public override async Task<IdentityResult> ValidateAsync(AppUser user)
         {
             IdentityResult result = await base.ValidateAsync(user);
-            if (!user.Email.ToUpper().Contains("@EXAMPLE.COM"))
-            {
-                var errors = result.Errors.ToList();
-                errors.Add("只允许使用 example.com 地址的邮箱");
-                result = new IdentityResult(errors);
-            }
+            //if (!user.Email.ToUpper().Contains("@EXAMPLE.COM"))
+            //{
+            //    var errors = result.Errors.ToList();
+            //    errors.Add("只允许使用 example.com 地址的邮箱");
+            //    result = new IdentityResult(errors);
+            //}
             return result;
         }
     }

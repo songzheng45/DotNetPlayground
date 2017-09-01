@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace Users.Controllers
 {
+    [RequireHttps]
     [Authorize(Roles = "Administrators")]
     public class AdminController : Controller
     {

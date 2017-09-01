@@ -10,6 +10,8 @@ namespace Users
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            
         }
     }
 }

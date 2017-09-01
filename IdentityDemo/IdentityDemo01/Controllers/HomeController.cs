@@ -10,6 +10,7 @@ using Users.Models;
 
 namespace Users.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         [Authorize]

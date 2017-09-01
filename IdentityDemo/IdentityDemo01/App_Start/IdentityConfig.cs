@@ -1,9 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Owin;
 using Users.Infrastructure;
-using Microsoft.AspNet.Identity;
 
 namespace Users
 {
@@ -21,17 +19,19 @@ namespace Users
             // 告诉 Identity 如何使用cookie去标识已验证过的用户
             app.UseCookieAuthentication(new Microsoft.Owin.Security.Cookies.CookieAuthenticationOptions
             {
-                // 验证类型. 
+                // 验证类型.
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
 
                 // 如果没有通过验证则跳转到登录页
                 LoginPath = new PathString("/Account/Login")
             });
 
-
             // 继承Google账号验证
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
-            app.UseGoogleAuthentication();
+
+            app.UseGoogleAuthentication(
+                clientId: "69798440560-rqrq66cepdco6g6po3tp2cgg0l09ahrk.apps.googleusercontent.com",
+                clientSecret: "qY5AW6L1eoDefGq69pz8I75G");
         }
     }
 }

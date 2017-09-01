@@ -39,7 +39,7 @@ namespace Users.Infrastructure
 
             manager.UserValidator = new CustomUserValidator(manager)
             {
-                AllowOnlyAlphanumericUserNames = true,  // 是否允许用户名中只包含字母数字
+                AllowOnlyAlphanumericUserNames = false,  // 是否允许用户名中只包含字母数字
                 RequireUniqueEmail = true   // 是否要求Email在系统中唯一
             };
 
