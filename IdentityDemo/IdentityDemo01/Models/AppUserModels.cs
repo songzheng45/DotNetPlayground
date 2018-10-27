@@ -1,20 +1,20 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Users.Models
 {
     public enum Cities
     {
-        北京,
-        东京,
-        马尼拉
+        Beijing,
+        Tokoy,
+        Manila
     }
 
     public enum Countries
     {
-        无,
-        中国,
-        日本,
-        菲律宾
+        None,
+        China,
+        Japan,
+        Philippines
     }
 
     public class AppUser : IdentityUser
@@ -25,20 +25,20 @@ namespace Users.Models
 
         public Countries SetCountryFromCity(Cities city)
         {
-            Countries c = Countries.无;
+            Countries c = Countries.None;
             switch (city)
             {
-                case Cities.北京:
-                    c = Countries.中国;
+                case Cities.Beijing:
+                    c = Countries.China;
                     break;
-                case Cities.东京:
-                    c = Countries.日本;
+                case Cities.Tokoy:
+                    c = Countries.Japan;
                     break;
-                case Cities.马尼拉:
-                    c = Countries.菲律宾;
+                case Cities.Manila:
+                    c = Countries.Philippines;
                     break;
                 default:
-                    c = Countries.无;
+                    c = Countries.None;
                     break;
             }
             return c;
