@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperSamples.Repository", "DapperSamples.Repository\DapperSamples.Repository.csproj", "{AF134BCE-4816-4489-88CC-DE6564794C84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperSamples.Web", "DapperSamples.Web\DapperSamples.Web.csproj", "{ACC95CFD-5B86-4F35-B8E5-5EA96E54C24F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF134BCE-4816-4489-88CC-DE6564794C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF134BCE-4816-4489-88CC-DE6564794C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF134BCE-4816-4489-88CC-DE6564794C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF134BCE-4816-4489-88CC-DE6564794C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACC95CFD-5B86-4F35-B8E5-5EA96E54C24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC95CFD-5B86-4F35-B8E5-5EA96E54C24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC95CFD-5B86-4F35-B8E5-5EA96E54C24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC95CFD-5B86-4F35-B8E5-5EA96E54C24F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

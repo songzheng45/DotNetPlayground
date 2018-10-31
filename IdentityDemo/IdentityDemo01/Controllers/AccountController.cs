@@ -82,8 +82,8 @@ namespace Users.Controllers
                 {
                     Email = loginInfo.Email,
                     UserName = loginInfo.DefaultUserName,
-                    City = Cities.北京,
-                    Country = Countries.中国
+                    City = Cities.Beijing,
+                    Country = Countries.China
                 };
 
                 IdentityResult result = await UserManager.CreateAsync(user);

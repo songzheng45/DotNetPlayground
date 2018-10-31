@@ -70,12 +70,12 @@ namespace Users.Migrations
 
             foreach (AppUser dbUser in userMgr.Users)
             {
-                dbUser.City = Cities.±±¾©; ;
+                dbUser.City = Cities.Beijing; ;
             }
 
             foreach (AppUser dbUser in userMgr.Users)
             {
-                if (dbUser.Country == Countries.ÎÞ)
+                if (dbUser.Country == Countries.None)
                 {
                     dbUser.Country = dbUser.SetCountryFromCity(dbUser.City);
                 }
