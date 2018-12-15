@@ -1,0 +1,26 @@
+﻿@using MvcCookieAuthSample2.Models
+@{
+    ViewData["Title"] = "Login";
+}
+@model LoginViewModel
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+
+<form asp-action="Login" asp-route-returnUrl='@ViewData["returnUrl"]' asp-controller="Account" method="post">
+    <div asp-validation-summary="All"></div>
+    <table>
+        <tr>
+            <td><label>Email:</label></td>
+            <td><input type="text" asp-for="Email" /></td>
+        </tr>
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" asp-for="Password" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="name" value="Login" /></td>
+        </tr>
+    </table>
+</form>

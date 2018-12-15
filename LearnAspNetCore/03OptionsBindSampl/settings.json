@@ -1,0 +1,10 @@
+{
+  "Database": {
+    "DatabaseName": "123",
+    "ServerHost": "128.0.0.1",
+    "Port": "1111",
+    "Username": "foo",
+    "Password": "123456"
+  },
+  "applicationName": "Cool App"
+}

@@ -1,0 +1,20 @@
+
+
+@model Settings
+
+<h1>@Model.Database.DatabaseName</h1>
+<h2>@Model.Database.ServerHost</h2>
+<p>@Model.Database.Port</p>
+<p>@Model.Database.Username</p>
+<p>@Model.Database.Password</p>
+<p>@Model.Database.ConnectionString</p>
+
+@*@using Microsoft.Extensions.Options
+    @inject IOptionsSnapshot<Settings> ConfigAccessor
+
+    <h1>@ConfigAccessor.Value.Database.DatabaseName</h1>
+    <h2>@ConfigAccessor.Value.Database.ServerHost</h2>
+    <p>@ConfigAccessor.Value.Database.Port</p>
+    <p>@ConfigAccessor.Value.Database.Username</p>
+    <p>@ConfigAccessor.Value.Database.Password</p>
+    <p>@ConfigAccessor.Value.Database.ConnectionString</p>*@
